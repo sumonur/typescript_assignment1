@@ -1,10 +1,6 @@
 Access Modifier in TypeScript OOP:
 
-In TypeScript, Access Modifiers control how class properties and methods can be accessed or modified. There are four commonly discussed modifiers:
-1. public
-2. private
-3. protected
-4. readonly
+In TypeScript, Access Modifiers control how class properties and methods can be accessed or modified. There are four commonly discussed modifiers are:
 
 1. public
 - A public property or method can be accessed from anywhere.
@@ -36,6 +32,8 @@ Rahim
 - A private property or method can only be accessed inside the class where it is declared.
 - It cannot be accessed directly from outside the class.
 - It cannot be accessed directly from child classes.
+
+Example:
 class Student {
     public name: string;
     private age: number;
@@ -64,8 +62,11 @@ Age: 15
 - A protected property or method can be accessed inside its own class.
 - It can also be accessed inside child (derived) classes.
 - It cannot be accessed directly from outside the class.
-protected name: string;
-{
+
+Example:
+class Person {
+    protected name: string;
+
     constructor(name: string) {
         this.name = name;
     }
@@ -90,6 +91,7 @@ Student Name: Rahim
 - It can be accessed from outside the class if its access modifier permits it.
 - It is useful when you want to prevent accidental modification of a property.
 
+Example:
 class Student {
     public readonly studentId: number;
     public name: string;
@@ -112,4 +114,3 @@ student1.name = "Karim";
 Output:
 ID: 101
 Name: Rahim
-

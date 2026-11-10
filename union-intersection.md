@@ -1,3 +1,5 @@
+Union (|) and Intersection (&) types in TypeScript:
+
 In TypeScript, Union (|) and Intersection (&) types allow us to combine multiple types to create flexible and reusable type definitions.
 
 1. Union Type (|)
@@ -86,3 +88,17 @@ Employment Type: Contractual
 type EmployeeDetails = Person & Employee & {
     employmentType: EmploymentType;
 };
+
+It combines two concepts:
+Operator	        Purpose	                                    Example
+& Intersection	    Requires all combined properties	        Person & Employee
+\| Union	        Allows one of multiple possible values	    "Permanent" \| "Contractual"
+
+Quick summary:
+- Union (|) means OR — one of the specified types.
+- Intersection (&) means AND — all combined types must be satisfied.
+
+Real-world applications:
+- Union: Payment methods (Cash, Card, Bank Transfer).
+- Intersection: Combining Customer and Address information.
+- Both together: Employee management, user authentication, API response structures.
